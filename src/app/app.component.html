@@ -2,18 +2,46 @@
   Formulário HTML com os dados a serem preenchidos:
 </div>
 <form *ngIf="pessoa">
-  <span>Nome</span>
   <div>
+    <span>Nome: </span>
     <input type="text" name="nome" [(ngModel)]="pessoa.nome">
   </div>
-  <span>Sobrenome</span>
   <div>
-    <input type="text" name="sobrenome" [(ngModel)]="pessoa.sobrenome">
+    <span>CPF: </span>
+    <input type="text" name="sobrenome" [(ngModel)]="pessoa.cpf">
   </div>
-  <span>Endereço</span>
   <div>
-    <input type="text" name="endereco" [(ngModel)]="pessoa.endereco">
+    <span>Idade: </span>
+    <input type="text" name="endereco" [(ngModel)]="pessoa.idade">
   </div>
+  <div>
+    <span>Campo1: </span>
+    <input type="text" name="endereco" [(ngModel)]="pessoa.campo1">
+  </div>
+  <div>
+    <span>Campo2: </span>
+    <input type="text" name="endereco" [(ngModel)]="pessoa.campo2">
+  </div>
+  <div>
+    <span>Campo3: </span>
+    <input type="text" name="endereco" [(ngModel)]="pessoa.campo3">
+  </div>
+  <div style="padding-top: 15px; padding-bottom: 5px;">Endereço</div>
+  <div>
+    <div>
+      Logradouro:
+      <input type="text" name="endereco" [(ngModel)]="pessoa.endereco.logradouro">
+    </div>
+    <div>
+      Bairro:
+      <input type="text" name="endereco" [(ngModel)]="pessoa.endereco.bairro">
+    </div>
+    <div>
+      Complemento:
+      <input type="text" name="endereco" [(ngModel)]="pessoa.endereco.complemento">
+    </div>
+  </div>
+
   <div style="padding-top: 5px; padding-bottom: 15px">
     <button (click)="enviar()" type="submit">Enviar</button>
   </div>
